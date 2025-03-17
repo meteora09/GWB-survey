@@ -4,6 +4,7 @@ body {
     margin: 50px;
     position: absolute;
     top: 15%
+    background: linear-gradient(to bottom right, #1e61f0, #f5d9e1)
 }
 button {
     padding: 10px 20px;
