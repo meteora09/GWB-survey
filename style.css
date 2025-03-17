@@ -11,13 +11,15 @@ body {
 }
 .center-image {
     display: block;
+    position: absolute;
+    top: 5%;
     margin: 20px auto; /* 중앙 정렬 + 상하 여백 */
     width: 60%; /* 원하는 크기로 조정 */
     height: auto; /* 비율 유지 */
-    max-width: 300px;
+    max-width: 170px;
 }
 h1 {
-    color: #0d1f91;
+    color: white;
     max-width: 80%;
     position: absolute;
     top: 15%;
