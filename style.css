@@ -9,11 +9,18 @@ body {
     align-items: center;
     flex-direction: column;
 }
+.center-image {
+    display: block;
+    margin: 20px auto; /* 중앙 정렬 + 상하 여백 */
+    width: 60%; /* 원하는 크기로 조정 */
+    height: auto; /* 비율 유지 */
+}
 h1 {
     max-width: 80%;
     position: absolute;
     top: 15%;
 }
+
 button {
     padding: 10px 20px;
     font-size: 16px;
