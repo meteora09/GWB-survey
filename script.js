@@ -4,17 +4,16 @@
     const options = {
         amplitudeBundleUrl: `https://cdn.amplitude.com/script/${AMPLITUDE_API_KEY}.js`,
         engagementScriptUrl: `https://cdn.amplitude.com/script/${AMPLITUDE_API_KEY}.engagement.js`,
-        experimentScriptUrl: `https://cdn.amplitude.com/script/${AMPLITUDE_API_KEY}.experiment.js`,
         projectAPIKey: AMPLITUDE_API_KEY,
         amplitudeConfig: {
             fetchRemoteConfig: true,
             defaultTracking: {
                 pageViews: true,
                 sessions: true,
-                fileDownloads: true,
-                formInteractions: true,
+                fileDownloads: false,
+                formInteractions: false,
                 clicks: true,
-                scrolls: true,
+                scrolls: false,
             },
         }
     };
@@ -34,7 +33,6 @@
     Promise.all([
         importExternal(options.amplitudeBundleUrl),
         importExternal(options.engagementScriptUrl),
-        importExternal(options.experimentScriptUrl)
     ]).then(() => {
         console.log('Amplitude unified script and engagement script loaded');
         window.amplitude.add(window.sessionReplay.plugin());
